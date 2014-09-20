@@ -19,7 +19,7 @@ module Baukis
     config.i18n.load_path +=
       Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ja
-    config.generators do |g
+    config.generators do |g|
       g.helper false
       g.assets false
       g.test_framework :rspec
