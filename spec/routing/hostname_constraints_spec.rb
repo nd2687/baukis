@@ -31,4 +31,12 @@ describe 'ルーティング' do
       anything: 'xyz'
     )
   end
+
+  example '顧客トップページ' do
+    expect(get: 'http://example.com/mypage').to route_to(
+      host: 'example.com',
+      controller: 'customer/top',
+      action: 'index'
+    )
+  end
 end
