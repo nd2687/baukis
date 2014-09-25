@@ -26,5 +26,6 @@ module Baukis
       g.controller_specs false
       g.view_specs false
     end
+    config.quiet_assets = false
   end
 end
