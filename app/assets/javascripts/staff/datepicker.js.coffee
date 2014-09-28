@@ -7,3 +7,4 @@ $(document).on 'page:change', ->
     yearRange: '1900:+00',
     defaultDate: '1970-01-01'
   })
+  $('.birthday-picker').datepicker()
