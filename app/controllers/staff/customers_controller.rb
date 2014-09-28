@@ -31,7 +31,7 @@ class Staff::CustomersController < Staff::Base
   def update
     @customer_form = Staff::CustomerForm.new(Customer.find(params[:id]))
     @customer_form.assign_attributes(params[:form])
-    if @current_form.save
+    if @customer_form.save
       flash.notice = '顧客情報を更新しました。'
       redirect_to action: 'index'
     else
