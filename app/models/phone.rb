@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: phones
+#
+#  id               :integer          not null, primary key
+#  customer_id      :integer          not null
+#  address_id       :integer
+#  number           :string(255)      not null
+#  number_for_index :string(255)      not null
+#  primary          :boolean          default(FALSE), not null
+#  created_at       :datetime
+#  updated_at       :datetime
+#  last_four_digits :string(255)
+#
+# Indexes
+#
+#  index_phones_on_address_id        (address_id)
+#  index_phones_on_customer_id       (customer_id)
+#  index_phones_on_last_four_digits  (last_four_digits)
+#  index_phones_on_number_for_index  (number_for_index)
+#
+
 class Phone < ActiveRecord::Base
   include StringNormalizer
 
